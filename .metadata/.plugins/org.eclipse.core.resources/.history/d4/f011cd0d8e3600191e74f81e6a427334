@@ -1,0 +1,15 @@
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// Hello World!の出力
+		int abc =7;
+		if(abc>8){
+			System.out.println(abc+"さん");
+		}else if(a<10){
+			System.out.println("B");
+		}
+
+	}
+
+}
