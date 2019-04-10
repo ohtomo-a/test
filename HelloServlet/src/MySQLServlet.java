@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLExeption;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -28,9 +28,9 @@ public class MySQLServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
 	ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		responsse.setContentType("text/html; charset=UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
 
-		PrintWriter out =respons.getWriter();
+		PrintWriter out =response.getWriter();
 
 		out.println("<html>");
 		out.println("<head>");
@@ -51,11 +51,11 @@ public class MySQLServlet extends HttpServlet {
 			String sql ="SELECT * FROM test_table";
 			ResultSet rs = stmt.executeQuery(sql);
 
-			While(rs.next()){
+			while(rs.next()){
 				int userId=rs.getInt("user_id");
 				String userName = rs.getString("user_name");
 				String userPassword = rs.getString("password");
-				out.plintln("<p>");
+				out.println("<p>");
 				out.println("ユーザーID:"+userId+",ユーザー名:"+userName+",パスワード:"+userPassword);
 				out.println("</p>");
 			}
@@ -73,7 +73,7 @@ public class MySQLServlet extends HttpServlet {
 				if(conn !=null){
 					conn.close();
 				}
-			}catch(SQLEception e){
+			}catch(SQLException e){
 				out.println("SQLExeption:"+e.getMessage());
 		}
 	}

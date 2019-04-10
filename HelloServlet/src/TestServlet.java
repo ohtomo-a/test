@@ -19,11 +19,11 @@ public class TestServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
 	ServletException, IOException {
-		request.setCharacterEncoding("UTF-8")+
+		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 
 		String username=request.getParameter("username");
-		String username=request.getParameter("password");
+		String password=request.getParameter("password");
 		System.out.println(username);
 		System.out.println(password);
 
@@ -43,7 +43,7 @@ public class TestServlet extends HttpServlet {
 		System.out.println(username);
 		System.out.println(password);
 
-		PrintWriter out=responce.getWriter();
+		PrintWriter out=response.getWriter();
 
 		out.println("<html><head></head><body><br>"+username+"<br>"+password+"</body></html>");
 

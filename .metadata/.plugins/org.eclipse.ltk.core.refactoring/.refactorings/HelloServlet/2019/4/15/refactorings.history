@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="&apos;mysql-connector-java-5.1.47-bin.jar&apos; を &apos;lib&apos; に移動" description="&apos;mysql-connector-java-5.1.47-bin.jar&apos; を &apos;lib&apos; に移動" destination="WebContent/WEB-INF/lib" element1="WebContent/WEB-INF/mysql-connector-java-5.1.47-bin.jar" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1554893155061" updateReferences="true"/>
+</session>
