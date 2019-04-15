@@ -1,0 +1,5 @@
+package com.internousdec.login.dto;
+
+public class LoginDTO {
+
+}

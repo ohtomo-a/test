@@ -1,0 +1,27 @@
+package  login;
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBCconnector {
+	private static String driverName="com.mysql.jdbc.Driver";
+	private static String url="jdbc:mysql://locallhost/logindb_ohtomo";
+
+	private static String user="root";
+	private static String password="mysql";
+
+	public Connection getConnection(){
+		Connection con=null;
+
+		try{
+			Class.forName(driverName);
+			con =(Connection) DriverManager.getConnection(url,user,password);
+
+		}catch(ClassNotFoundExeption e){
+			e.printStackTrace();
+		}catch(SQLExeption e){
+			e.printStackTrace();
+		}
+		return con;
+	}
+
+}

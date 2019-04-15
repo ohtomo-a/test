@@ -1,0 +1,31 @@
+package com.internousdev.login.dto;
+
+public class LoginDTO {
+	private int id;
+	private String name;
+	private String password;
+
+	public int getId(int id){
+		return id;
+	}
+
+	public coid setId(String name){
+		this.id = id;
+	}
+
+	public String getName(){
+		return name;
+	}
+
+	public coid setName(String name){
+		this.name = name;
+	}
+
+	public String getName(){
+		return name;
+	}
+
+	public coid setName(String name){
+		this.name = name;
+
+}
