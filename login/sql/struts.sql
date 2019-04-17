@@ -1,5 +1,5 @@
 set names utf8;
-set foreign_key_checks-0;
+set foreign_key_checks=0;
 drop database if exists logindb_ohtomo;
 create database logindb_ohtomo;
 use logindb_ohtomo;
@@ -8,7 +8,7 @@ create table user(
 id int,
 user_name varchar(255),
 password varchar(255)
-)
+);
 
 insert into user values
 (1,"taro","123"),

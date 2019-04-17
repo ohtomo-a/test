@@ -17,7 +17,7 @@ public class LoginAction extends ActionSupport{
 		LoginDAO dao=new LoginDAO();
 		LoginDTO dto=new LoginDTO();
 
-		dto=dao.select(name, password);
+		dto = dao.select(name, password);
 		if(name.equals(dto.getName())){
 			if(password.equals(dto.getPassword())){
 				ret=SUCCESS;
@@ -28,7 +28,7 @@ public class LoginAction extends ActionSupport{
 	public String getName(){
 		return name;
 	}
-	public void setNamme(String name){
+	public void setName(String name){
 		this.name=name;
 	}
 	public String getPassword(){

@@ -1,10 +1,11 @@
 package com.internousdev.login.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DBConnector {
 	private static String driverName="com.mysql.jdbc.Driver";
-	private static String url="jdbc:mysql://locallhost/logindb_ohtomo";
+	private static String url="jdbc:mysql://localhost/logindb_ohtomo";
 
 	private static String user="root";
 	private static String password="mysql";
@@ -16,9 +17,9 @@ public class DBConnector {
 			Class.forName(driverName);
 			con =(Connection) DriverManager.getConnection(url,user,password);
 
-		}catch(ClassNotFoundExeption e){
+		}catch(ClassNotFoundException e){
 			e.printStackTrace();
-		}catch(SQLExeption e){
+		}catch(SQLException e){
 			e.printStackTrace();
 		}
 		return con;
