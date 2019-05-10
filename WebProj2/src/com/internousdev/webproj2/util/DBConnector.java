@@ -27,9 +27,9 @@ public Connection getConnection() {
 	try {
 		Class.forName(driverName);
 		con = DriverManager.getConnection(url,user,password);
-	}catch(ClassNotFoundException e) {
+	} catch (ClassNotFoundException e) {
 		e.printStackTrace() ;
-	}catch(SQLException e) {
+	} catch (SQLException e) {
 		e.printStackTrace() ;
 	}
 	return con ;
