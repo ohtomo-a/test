@@ -26,14 +26,14 @@
 	<s:form method="get" action="TestAction">
 	<s:textfield name="username"/>
 	<s:password name="password"/>
-	<s:submit valu="送信"/>
+	<s:submit value="送信"/>
 	</s:form>
 
 	POST通信
 	<s:form method="post" action="TestAction">
 	<s:textfield name="username"/>
 	<s:password name="password"/>
-	<s:submit valu="送信"/>
+	<s:submit value="送信"/>
 	</s:form>
 
 </body>
