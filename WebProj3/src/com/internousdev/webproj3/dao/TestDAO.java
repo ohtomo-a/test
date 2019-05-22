@@ -6,32 +6,29 @@ import java.sql.SQLException;
 
 import com.internousdev.webproj3.util.DBConnector;
 
-public class InquiryCompleteDAO {
-	public int insert(String name, String qtype, String body){
-		int ret = 0;
+public class TestDAO {
+	public int insert(String username,String password){
+		int ret = 0 ;
 		DBConnector db = new DBConnector();
 		Connection con = db.getConnection();
-
-		String sql = "insert into inquiry values(?,?,?)";
+		String sql = "insert into users(user_name,password) values(?,?)";
 		try{
 			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setString(1, name);
-			ps.setString(2, qtype);
-			ps.setString(3, body);
-			int i =ps.executeUpdate();
+			ps.setString(1, username);
+			ps.setString(2, password);
+			int i = ps.executeUpdate();
 			if(i>0){
-				System.out.println( i +"件登録されました");
+				System.out.println(i+"件登録されました。");
 				ret = i;
 			}
 		}catch (SQLException e){
 			e.printStackTrace();
 		}
-		try {
+		try{
 			con.close();
 		}catch (SQLException e){
 			e.printStackTrace();
-		}
-		return ret;
+		}return ret;
 	}
 
 }
