@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnector {
-
 	/**
 	 * JDBCドライバー名
 	 */
@@ -13,7 +12,7 @@ public class DBConnector {
 	/**
 	 * データベース接続URL
 	 */
-	private static String url ="jdbc:myql://localhost/testdb";
+	private static String url ="jdbc:mysql://localhost/testdb";
 	/**
 	 * データベース接続ユーザー名
 	 */
